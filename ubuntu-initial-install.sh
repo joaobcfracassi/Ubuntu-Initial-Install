@@ -68,6 +68,14 @@ else
 	apt-get update && apt-get install sublime-text git curl geany codelite python-y
 	clear
 
+	echo "Containers..."
+	sleep 2
+	apt update && apt install apt-transport-https ca-certificates curl software-properties-common -y
+	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - 
+	add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable" | apt update
+	clear
+	apt-cache policy docker-ce | sleep 5 | sudo apt install docker-ce -y
+
 	echo "Utilitários..."
 	sleep 2
 	apt install net-tools locate Keepassx figlet htop -y
