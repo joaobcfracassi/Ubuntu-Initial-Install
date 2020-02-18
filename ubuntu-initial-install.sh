@@ -37,7 +37,7 @@ else
 		gsettings set org.gnome.shell.extensions.desktop-icons show-trash false
 		gsettings set org.gnome.shell.extensions.desktop-icons show-home false
 		gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
-		apt install gnome-tweak-tool -y
+		apt install gnome-tweak-tool numix-icon-theme-circle -y
 		clear
 	else
 		echo -e "\033[01;32mA interface não é Gnome....\033[00;37m"
