@@ -29,7 +29,7 @@ else
 	clear
 	
 	echo -e "\033[01;32mVerificando se a interface é Gnome...\033[00;37m"
-	if [ pgrep "gnome-shell" > /dev/null ]; 
+	if [ pgrep "gnome" > /dev/null ]; 
 	then 
 		echo -e "\033[01;32mExecutando otmizações no Gnome...\033[00;37m"
 		sleep 2
@@ -76,8 +76,8 @@ else
 	apt update && apt install apt-transport-https ca-certificates curl software-properties-common -y
 	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - 
 	add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable" | apt update
-	clear
 	apt-cache policy docker-ce | sleep 5 | sudo apt install docker-ce -y
+	clear
 
 	echo -e "\033[01;32mUtilitários...\033[00;37m"
 	sleep 2
@@ -90,6 +90,8 @@ else
 	clear
 
 	echo -e "\033[01;32mFinalizado a instalação dos aplicativos/ferramentas no Ubuntu Linux...\033[00;37m"
+	echo ""
+	echo ""
 
 fi
 
